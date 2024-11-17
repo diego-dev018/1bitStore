@@ -5,6 +5,9 @@
 ## Instalacion
 
 ### 1. Clonar el repositorio
+```sh
+git clone https://github.com/diego-dev018/1bitStore
+```
 ### 2. Instalar las dependencias
 ```sh
 npm install
