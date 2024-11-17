@@ -1,0 +1,44 @@
+---
+import SectionContainer from "./SectionContainer.astro"
+
+const info = [
+    {
+        title: "Created By Diego Sanchez",
+        href: ""
+    },
+    {
+        title: "Links from other stores",
+        href: ""
+    },
+]
+
+---
+
+<SectionContainer classExtra="!pb-10 w-full">
+    <footer class="w-full">
+        <h3 
+        class="text-center text-3xl font-extrabold opacity-50 hover:opacity-100 transition"
+        >
+            <a href="#">
+                1bit
+            </a>
+        </h3>
+        <div>
+            {
+                info.map(n => (
+                    <a
+                    href={n.href}
+                    class="flex justify-center"
+                    target="_blank"
+                    >
+                        <h5
+                        class="flex justify-center w-fit text-xl font-bold opacity-50 hover:opacity-100 transition"
+                        >
+                        {n.title}
+                        </h5>
+                    </a>
+                ))
+            }
+        </div>
+    </footer>
+</SectionContainer>

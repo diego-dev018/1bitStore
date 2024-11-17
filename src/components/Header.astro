@@ -1,0 +1,58 @@
+---
+import SectionContainer from "./SectionContainer.astro"
+
+const sections = [
+    {
+        title: "Inicio",
+        url: "/",
+        classExtra: "hidden md:block",
+    },
+    {
+        title: "Productos",
+        url: "/productos",
+        classExtra: "",
+    },
+    {
+        title: "Seguir comprando...",
+        url: "/comprar",
+        classExtra: "",
+    },
+]
+---
+
+<SectionContainer classExtra="!py-4">
+    <header class="flex-col gap-2 md:gap-0 md:flex-row flex w-full items-center text-2xl justify-between">
+        <div class="text-3xl font-extrabold md:hidden">
+            <a 
+            href="/"
+            class="hover:text-blue-500 transition"
+            >
+                1bit Store
+            </a>
+        </div>
+        <div 
+        class="flex gap-8 font-bold justify-around w-full md:justify-normal md:w-fit">
+            {
+                sections.map(n => (
+                    <a
+                    href={n.url}
+                    class:list={[
+                        "hover:text-blue-300 hover:scale-105 transition",
+                        n.classExtra
+                    ]}
+                    >
+                        {n.title}
+                    </a>
+                ))
+            }
+        </div>
+        <div class="text-3xl font-extrabold">
+            <a 
+            href="/"
+            class="hover:text-blue-500 transition hidden md:block"
+            >
+                1bit Store
+            </a>
+        </div>
+    </header>
+</SectionContainer>

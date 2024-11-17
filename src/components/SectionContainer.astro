@@ -1,0 +1,13 @@
+---
+interface Props {
+    classExtra?: string
+}
+
+const classExtra = Astro.props.classExtra;
+---
+
+<main class:list={["px-8 py-4", classExtra]}>
+    <div>
+        <slot />
+    </div>
+</main>
